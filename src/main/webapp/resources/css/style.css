@@ -1,95 +1,47 @@
-.actions{
-	margin-top: 10px;
+.borderedDiv{
+border: 1px solid lightgray;
+height: 475px;
+
 }
 
-#content{
-	margin-left: 150px;
-	margin-right: 150px;
-	margin-top: 15px;
-	width: 1040px;	
+.messageScroll{
+overflow-x: hidden;
+overflow-y: auto;
 }
 
 #registration{
-	width: 250px;
-}
-
-.scrollBar{
-	overflow: auto;
-	height: 145px;
-	width: 250px;
-}
-
-.borderedDiv{
-	border: 1px solid lightgray;
-	height: 475px;
-}
-
-.messageScroll{
-	overflow-x: hidden;
-	overflow-y: auto; 
-	height: 475px;
-}
-
-#topContent{
-	margin-bottom: 20px;
-	margin-right: 0px;
-}
-
-.messageScroll{
-	overflow: auto;
-	height: 475px;
+width: 160px;
 }
 
 .currentUser{
-	width: 250px;
-	height: 75px;
-	border-color:gray;
-	border: 1px solid lightgray;
-	border-radius: 5px 5px 5px 5px;
-	text-align: center;
-}
-.smile{
-	background: rgb(254,252,234); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
-
+width: 160px;
+height: 75px;
+border-color:gray;
+border: 1px solid lightgray;
+border-radius: 5px 5px 5px 5px;
+text-align: center;
 }
 
 #saveCurrentName{
+display: none;
+float: center;
+}
+
+
+#changeName{
 	display: none;
-	float: center;
 }
-
- #changeName{
-	display: none;
-}
-
-.nick{
-	color: lightblue;
-}
-
 .exampleMessage{
 	display: none;
 }
+.color{
+	background: rgb(246,248,249); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(245,247,249,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,248,249,1)), color-stop(50%,rgba(229,235,238,1)), color-stop(100%,rgba(245,247,249,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
 
-#editMessage{
-	display: none;
-}
-
-#saveMessage{
-	display: none;
-}
-
-#changeMessage{
-	display: none;
-}
-
-.message{
-	width: 500px;
-	border-color: green;
 }

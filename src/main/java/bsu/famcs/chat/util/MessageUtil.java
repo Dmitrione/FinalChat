@@ -16,22 +16,19 @@ public final class MessageUtil {
     public static final String MESSAGES = "messages";
     private static final String TN = "TN";
     private static final String EN = "EN";
-    private static final String USER_NAME = "userName";
-    private static final String MSG_TEXT = "msgText";
-    private static final String NOT_CHANGED = "not changed";
-    private static final String DELETED = "isDeleted";
-    private static final String ID = "id";
+    private static final String USER = "user";
+    private static final String TEXT = "text";
 
     private MessageUtil() {
     }
 
     public static String getToken(int index) {
-        Integer number = index;
+        Integer number = index * 8 + 11;
         return TN + number + EN;
     }
 
     public static int getIndex(String token) {
-        return (Integer.valueOf(token.substring(2, token.length() - 2)));
+        return (Integer.valueOf(token.substring(2, token.length() - 2)) - 11) / 8;
     }
 
     private static String generateId() {
@@ -50,24 +47,10 @@ public final class MessageUtil {
     }
 
     public static Message jsonToMessage(JSONObject json) {
-        String userName = (String)json.get(USER_NAME);
-        String msgText = ((String)json.get(MSG_TEXT)).trim();
-        if (userName != null && msgText != null) {
-            Message msg =  new Message(generateId(), userName, msgText, generateCurrentDate(), NOT_CHANGED, false);
-            return msg;
-        }
-        return null;
-    }
-
-    public static Message jsonToCurrentMessage(JSONObject json) {
-        String id = (String)json.get(ID);
-        String messageText = ((String)json.get(MSG_TEXT)).trim();
-        String changeDate = (String)json.get(DELETED);
-        if (changeDate == null) {
-            changeDate = NOT_CHANGED;
-        }
-        if (id != null) {
-            return new Message(id, null, messageText, null, changeDate, false);
+        String user = (String)json.get(USER);
+        String text = ((String)json.get(TEXT)).trim();
+        if (user != null) {
+            return new Message(generateId(), user, text, generateCurrentDate());
         }
         return null;
     }

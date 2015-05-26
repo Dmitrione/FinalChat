@@ -14,25 +14,8 @@ public final class MessageStorage {
         return HISTORY;
     }
 
-    public static void addMessagePost(Message message) {
+    public static void addMessage(Message message) {
         HISTORY.add(message);
-    }
-    public static void addMessageDelete(Message message) {
-        for(int i=0; i < HISTORY.size(); i++){
-            if(Integer.parseInt(HISTORY.get(i).getId()) == Integer.parseInt(message.getId())){
-                HISTORY.get(i).setMsgText(message.getMsgText());
-                HISTORY.get(i).isDelete();
-                HISTORY.get(i).setChangeDate();
-            }
-        }
-    }
-    public static void addMessagePut(Message message) {
-        for(int i=0; i < HISTORY.size(); i++){
-            if(Integer.parseInt(HISTORY.get(i).getId()) == Integer.parseInt(message.getId())){
-                HISTORY.get(i).setMsgText(message.getMsgText());
-                HISTORY.get(i).setChangeDate();
-            }
-        }
     }
 
     public static void addAll(List<Message> messages) {
@@ -47,17 +30,9 @@ public final class MessageStorage {
         return HISTORY.subList(index, HISTORY.size());
     }
 
-    public static Message getMessageById(String id) {
-        for (Message message : HISTORY) {
-            if (id.equals(message.getId())) {
-                return message;
-            }
-        }
-        return null;
-    }
-
     public static String getStringView() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb;
+        sb = new StringBuilder();
         for (Message message : HISTORY) {
             sb.append(message.getUserMessage());
             sb.append('\n');

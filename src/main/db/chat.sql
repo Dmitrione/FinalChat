@@ -39,7 +39,7 @@ CREATE TABLE `messages` (
 
 LOCK TABLES `messages` WRITE;
 /*!40000 ALTER TABLE `messages` DISABLE KEYS */;
-INSERT INTO `messages` VALUES (0,'hello, people!','2015-05-15',0),(1,'hey','2015-05-15',3),(2,'hello, vitaly','2015-05-16',4),(3,'how are you?','2020-05-16',4),(4,'i am fine! and you?','2015-05-16',0),(5,'great','2015-05-17',4),(6,'ahahhaha','2015-05-17',8),(7,'what are you doing now, people?','2015-05-18',7),(8,'i do my homework. and you?','2015-05-18',8),(9,'i have relax','2015-05-19',7);
+INSERT INTO `messages` VALUES (0,'hello!','2015-05-15',3),(1,'hi','2015-05-15',0),(2,'hello, dima','2015-05-16',4),(3,'how are you?','2020-05-16',4),(4,'i am fine! and you?','2015-05-16',0),(5,'great','2015-05-17',4),(6,'ahahhaha','2015-05-17',8),(7,'what are you doing now, people?','2015-05-18',7),(8,'i do my homework. and you?','2015-05-18',8),(9,'i have relax','2015-05-19',7);
 /*!40000 ALTER TABLE `messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +63,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (0,'vitaly'),(1,'stepan'),(2,'ivan'),(3,'molochko'),(4,'artem'),(5,'lena'),(6,'kate'),(7,'ivanov'),(8,'anna'),(9,'nastya');
+INSERT INTO `users` VALUES (0,'dima'),(1,'step'),(2,'ivan'),(3,'alla'),(4,'teo'),(5,'lera'),(6,'kate'),(7,'leha'),(8,'anna'),(9,'nastya');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
